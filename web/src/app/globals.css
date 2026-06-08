@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #8b5cf6; /* Neon Purple */
+  --color-brand-secondary: #facc15; /* Vibrant Yellow */
+  --color-brand-bg: #0f172a; /* Deep Blue/Black */
+  --color-brand-surface: #1e293b;
+  --color-brand-accent: #06b6d4; /* Cyan */
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-slate-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-primary hover:bg-violet-500 text-white font-bold py-2 px-4 rounded shadow-lg transition-all;
+  }
+  .btn-secondary {
+    @apply bg-brand-secondary hover:bg-yellow-400 text-brand-bg font-bold py-2 px-4 rounded shadow-lg transition-all;
+  }
+  .card {
+    @apply bg-brand-surface border border-slate-700 rounded-xl p-6 shadow-xl;
+  }
+  .neon-text {
+    @apply text-brand-primary drop-shadow-[0_0_8px_rgba(139,92,246,0.6)];
+  }
+  .neon-border {
+    @apply border-brand-primary shadow-[0_0_10px_rgba(139,92,246,0.4)];
+  }
+}
